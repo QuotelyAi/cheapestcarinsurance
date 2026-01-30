@@ -4,6 +4,7 @@ import { carrierCount } from '@/lib/config';
 import HeroSection from '@/components/HeroSection';
 import InsurancePricingCalculator from '@/components/InsurancePricingCalculator';
 import WhyChooseUs from '@/components/WhyChooseUs';
+import SavingsComparison from '@/components/SavingsComparison';
 import Testimonials from '@/components/Testimonials';
 import FAQSection from '@/components/FAQSection';
 import ModernCTA from '@/components/ModernCTA';
@@ -38,6 +39,9 @@ export default async function Home() {
 
       {/* Why Choose Us */}
       <WhyChooseUs />
+
+      {/* Carrier Savings Comparison */}
+      <SavingsComparison />
 
       {/* Testimonials - Real Google Reviews Only */}
       <Testimonials />
