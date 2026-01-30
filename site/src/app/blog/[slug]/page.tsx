@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { getPostBySlug, getAllPostSlugs, getMedia, getCategories, getRelatedPosts } from '@/lib/wordpress';
 import RelatedPosts from '@/components/RelatedPosts';
 import WPContent from '@/components/WPContent';
+import AuthorByline from '@/components/AuthorByline';
+import { founderConfig, agencyConfig } from '@/lib/config';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -101,12 +103,82 @@ export default async function BlogPostPage({ params }: Props) {
   ]);
 
   const postCategories = categories.filter((cat) => post.categories.includes(cat.id));
+  const plainTitle = post.title.replace(/<[^>]*>/g, '');
+  const plainExcerpt = post.excerpt.replace(/<[^>]*>/g, '').trim();
+
+  // Article Schema for E-E-A-T
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": plainTitle,
+    "description": plainExcerpt || extractMetaDescription(post.content),
+    "image": featuredMedia?.source_url || "https://cheapestcarinsurancetulsa.com/logo.jpg",
+    "datePublished": post.date,
+    "dateModified": post.modified,
+    "author": {
+      "@type": "Person",
+      "@id": "https://cheapestcarinsurancetulsa.com/#founder",
+      "name": founderConfig.name,
+      "jobTitle": founderConfig.title,
+      "url": "https://cheapestcarinsurancetulsa.com/about"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "@id": "https://cheapestcarinsurancetulsa.com/#organization",
+      "name": agencyConfig.name,
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://cheapestcarinsurancetulsa.com/logo.jpg"
+      }
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": `https://cheapestcarinsurancetulsa.com/blog/${slug}`
+    }
+  };
+
+  // BreadcrumbList Schema
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://cheapestcarinsurancetulsa.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Blog",
+        "item": "https://cheapestcarinsurancetulsa.com/blog"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": plainTitle,
+        "item": `https://cheapestcarinsurancetulsa.com/blog/${slug}`
+      }
+    ]
+  };
 
   return (
     <article className="py-16">
+      {/* Article Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      {/* Breadcrumb Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Breadcrumb */}
-        <nav className="mb-8">
+        <nav className="mb-8" aria-label="Breadcrumb">
           <ol className="flex items-center space-x-2 text-sm text-gray-500">
             <li>
               <Link href="/" className="hover:text-blue-600">Home</Link>
@@ -138,15 +210,14 @@ export default async function BlogPostPage({ params }: Props) {
             className="text-4xl md:text-5xl font-bold mb-4"
             dangerouslySetInnerHTML={{ __html: post.title }}
           />
-          <div className="flex items-center text-gray-500 space-x-4">
-            <time dateTime={post.date}>
-              {new Date(post.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric',
-              })}
-            </time>
-          </div>
+          {/* Author Byline with E-E-A-T signals */}
+          <AuthorByline
+            publishedDate={post.date}
+            updatedDate={post.modified}
+            showSchema={false}
+            showReviewedBy={true}
+            showFactCheck={true}
+          />
         </header>
 
         {/* Featured Image */}
@@ -166,6 +237,16 @@ export default async function BlogPostPage({ params }: Props) {
         <WPContent
           html={post.content}
           className="prose prose-lg max-w-none prose-headings:text-gray-900 prose-p:text-gray-700 prose-a:text-blue-600 prose-img:rounded-lg"
+        />
+
+        {/* Author Bio Box for E-E-A-T */}
+        <AuthorByline
+          publishedDate={post.date}
+          updatedDate={post.modified}
+          showSchema={true}
+          variant="full"
+          showReviewedBy={true}
+          showFactCheck={true}
         />
 
         {/* Related Posts */}

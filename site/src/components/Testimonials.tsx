@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { agencyConfig } from '@/lib/config';
 
 // This component displays REAL Google Reviews only
 // Requires: NEXT_PUBLIC_GOOGLE_PLACES_API_KEY and NEXT_PUBLIC_GOOGLE_PLACE_ID env vars
@@ -11,6 +12,7 @@ interface GoogleReview {
   text: string;
   relative_time_description: string;
   profile_photo_url?: string;
+  time?: number; // Unix timestamp
 }
 
 interface PlaceDetails {
@@ -112,8 +114,44 @@ export default function Testimonials() {
     );
   }
 
+  // Generate Review Schema for E-E-A-T
+  const reviewSchema = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": "https://cheapestcarinsurancetulsa.com/#organization",
+    "name": agencyConfig.name,
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": placeData.rating,
+      "reviewCount": placeData.user_ratings_total,
+      "bestRating": 5,
+      "worstRating": 1
+    },
+    "review": placeData.reviews.filter(review => review.rating >= 2).slice(0, 6).map(review => ({
+      "@type": "Review",
+      "author": {
+        "@type": "Person",
+        "name": review.author_name
+      },
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": review.rating,
+        "bestRating": 5,
+        "worstRating": 1
+      },
+      "reviewBody": review.text,
+      "datePublished": review.time ? new Date(review.time * 1000).toISOString().split('T')[0] : undefined
+    }))
+  };
+
   return (
     <section className="py-20 bg-white">
+      {/* Review Schema for E-E-A-T */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(reviewSchema) }}
+      />
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { getPageBySlug, getAllPageSlugs, getMedia } from '@/lib/wordpress';
 import WPContent from '@/components/WPContent';
+import Breadcrumbs from '@/components/Breadcrumbs';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -102,19 +103,19 @@ export default async function DynamicPage({ params }: Props) {
 
   const featuredMedia = page.featured_media ? await getMedia(page.featured_media) : null;
 
+  const plainTitle = page.title.replace(/<[^>]*>/g, '');
+
   return (
     <div className="py-16">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Breadcrumb */}
-        <nav className="mb-8">
-          <ol className="flex items-center space-x-2 text-sm text-gray-500">
-            <li>
-              <Link href="/" className="hover:text-blue-600">Home</Link>
-            </li>
-            <li>/</li>
-            <li className="text-gray-900 truncate max-w-xs" dangerouslySetInnerHTML={{ __html: page.title }} />
-          </ol>
-        </nav>
+        {/* Breadcrumb with Schema */}
+        <Breadcrumbs
+          items={[
+            { name: 'Home', href: '/' },
+            { name: plainTitle }
+          ]}
+          className="mb-8"
+        />
 
         {/* Header */}
         <header className="mb-8">
