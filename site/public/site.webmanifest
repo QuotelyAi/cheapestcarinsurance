@@ -1,0 +1,19 @@
+{
+  "name": "Cheapest Car Insurance Tulsa",
+  "short_name": "CCI Tulsa",
+  "description": "Compare car insurance from 10 carriers in Tulsa, OK. Licensed independent agency.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1e40af",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "categories": ["business", "finance", "insurance"],
+  "lang": "en-US",
+  "dir": "ltr"
+}

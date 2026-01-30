@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a8a;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#312e81;stop-opacity:1"></stop>
+    </linearGradient>
+    <linearGradient id="aiGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#22d3ee;stop-opacity:1"></stop>
+      <stop offset="100%" style="stop-color:#06b6d4;stop-opacity:1"></stop>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"></feGaussianBlur>
+      <feMerge>
+        <feMergeNode in="coloredBlur"></feMergeNode>
+        <feMergeNode in="SourceGraphic"></feMergeNode>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bgGradient)"></rect>
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"></path>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#grid)"></rect>
+  <g opacity="0.3">
+    <rect x="150" y="200" width="200" height="150" fill="#374151" stroke="#6b7280" stroke-width="2"></rect>
+    <rect x="160" y="210" width="180" height="110" fill="#1f2937"></rect>
+    <text x="250" y="270" text-anchor="middle" fill="#6b7280" font-family="monospace" font-size="14">LEGACY SYSTEM</text>
+    <rect x="180" y="360" width="140" height="180" fill="#d1d5db" stroke="#9ca3af" stroke-width="1" transform="rotate(-5 250 450)"></rect>
+    <rect x="190" y="370" width="140" height="180" fill="#e5e7eb" stroke="#9ca3af" stroke-width="1" transform="rotate(-3 260 460)"></rect>
+    <rect x="200" y="380" width="140" height="180" fill="#f3f4f6" stroke="#9ca3af" stroke-width="1"></rect>
+    <line x1="220" y1="410" x2="320" y2="410" stroke="#9ca3af" stroke-width="1"></line>
+    <line x1="220" y1="430" x2="320" y2="430" stroke="#9ca3af" stroke-width="1"></line>
+    <line x1="220" y1="450" x2="300" y2="450" stroke="#9ca3af" stroke-width="1"></line>
+  </g>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#22d3ee" opacity="0.8"></polygon>
+    </marker>
+  </defs>
+  <line x1="400" y1="315" x2="550" y2="315" stroke="#22d3ee" stroke-width="3" marker-end="url(#arrowhead)" opacity="0.8"></line>
+  <g>
+    <circle cx="700" cy="250" r="15" fill="url(#aiGradient)" filter="url(#glow)"></circle>
+    <circle cx="700" cy="380" r="15" fill="url(#aiGradient)" filter="url(#glow)"></circle>
+    <circle cx="800" cy="200" r="15" fill="url(#aiGradient)" filter="url(#glow)"></circle>
+    <circle cx="800" cy="315" r="15" fill="url(#aiGradient)" filter="url(#glow)"></circle>
+    <circle cx="800" cy="430" r="15" fill="url(#aiGradient)" filter="url(#glow)"></circle>
+    <circle cx="900" cy="250" r="15" fill="url(#aiGradient)" filter="url(#glow)"></circle>
+    <circle cx="900" cy="380" r="15" fill="url(#aiGradient)" filter="url(#glow)"></circle>
+    <line x1="700" y1="250" x2="800" y2="200" stroke="#22d3ee" stroke-width="2" opacity="0.5"></line>
+    <line x1="700" y1="250" x2="800" y2="315" stroke="#22d3ee" stroke-width="2" opacity="0.5"></line>
+    <line x1="700" y1="380" x2="800" y2="315" stroke="#22d3ee" stroke-width="2" opacity="0.5"></line>
+    <line x1="700" y1="380" x2="800" y2="430" stroke="#22d3ee" stroke-width="2" opacity="0.5"></line>
+    <line x1="800" y1="200" x2="900" y2="250" stroke="#22d3ee" stroke-width="2" opacity="0.5"></line>
+    <line x1="800" y1="315" x2="900" y2="250" stroke="#22d3ee" stroke-width="2" opacity="0.5"></line>
+    <line x1="800" y1="315" x2="900" y2="380" stroke="#22d3ee" stroke-width="2" opacity="0.5"></line>
+    <line x1="800" y1="430" x2="900" y2="380" stroke="#22d3ee" stroke-width="2" opacity="0.5"></line>
+    <text x="800" y="500" text-anchor="middle" fill="#22d3ee" font-family="Arial, sans-serif" font-size="24" font-weight="bold">AI-POWERED</text>
+    <text x="800" y="530" text-anchor="middle" fill="#e0f2fe" font-family="Arial, sans-serif" font-size="18">Insurance Rating</text>
+  </g>
+  <text x="600" y="100" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="42" font-weight="bold">AI vs Legacy Raters</text>
+  <circle cx="100" cy="100" r="40" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.2"></circle>
+  <circle cx="1100" cy="530" r="50" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.2"></circle>
+  <circle cx="1050" cy="100" r="30" fill="none" stroke="#22d3ee" stroke-width="1" opacity="0.2"></circle>
+</svg>
