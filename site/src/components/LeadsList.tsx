@@ -14,6 +14,7 @@ interface Lead {
   email?: string;
   phone?: string;
   submissionId?: string;
+  sourceWebsite?: string;
 }
 
 interface LeadsListProps {
@@ -176,6 +177,11 @@ export default function LeadsList({ refreshTrigger }: LeadsListProps) {
                                 <a href={`tel:${lead.phone}`} className="hover:text-blue-600">
                                   {lead.phone}
                                 </a>
+                              </div>
+                            )}
+                            {lead.sourceWebsite && (
+                              <div className="text-xs text-gray-400 mt-1">
+                                Source: {lead.sourceWebsite}
                               </div>
                             )}
                           </div>

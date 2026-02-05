@@ -179,7 +179,7 @@ export default function Testimonials() {
                 {review.profile_photo_url && (
                   <img
                     src={review.profile_photo_url}
-                    alt=""
+                    alt={`${review.author_name} profile photo`}
                     className="w-10 h-10 rounded-full"
                   />
                 )}

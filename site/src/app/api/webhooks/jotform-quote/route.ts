@@ -1,51 +1,18 @@
 import { NextResponse } from 'next/server';
-import { writeFile, readFile, mkdir } from 'fs/promises';
-import { existsSync } from 'fs';
-import path from 'path';
+import { put } from '@vercel/blob';
 
 const WEBHOOK_SECRET = process.env.JOTFORM_WEBHOOK_SECRET;
-const LEADS_JSON_PATH = path.join(process.cwd(), 'content', 'leads.json');
 
 interface Lead {
   id: string;
-  type: 'form' | 'pdf';
-  filename?: string;
-  storedAs?: string;
+  type: 'form';
   uploadedAt: string;
-  size?: number;
-  formData?: Record<string, unknown>;
-  name?: string;
-  email?: string;
-  phone?: string;
-  submissionId?: string;
-}
-
-interface LeadsData {
-  leads: Lead[];
-}
-
-async function ensureDirectories() {
-  const contentDir = path.join(process.cwd(), 'content');
-  if (!existsSync(contentDir)) {
-    await mkdir(contentDir, { recursive: true });
-  }
-}
-
-async function readLeadsData(): Promise<LeadsData> {
-  try {
-    if (existsSync(LEADS_JSON_PATH)) {
-      const data = await readFile(LEADS_JSON_PATH, 'utf-8');
-      return JSON.parse(data);
-    }
-  } catch (error) {
-    console.error('Error reading leads data:', error);
-  }
-  return { leads: [] };
-}
-
-async function writeLeadsData(data: LeadsData): Promise<void> {
-  await ensureDirectories();
-  await writeFile(LEADS_JSON_PATH, JSON.stringify(data, null, 2));
+  name: string;
+  email: string;
+  phone: string;
+  submissionId: string;
+  sourceWebsite: string;
+  formData: Record<string, unknown>;
 }
 
 function generateId(): string {
@@ -122,6 +89,11 @@ export async function POST(request: Request) {
                   extractFieldValue(rawRequest, 'phone') ||
                   formData.pretty?.toString().match(/Phone:\s*([^\n]+)/)?.[1] || '';
 
+    const sourceWebsite = extractFieldValue(rawRequest, 'q7_sourceWebsite') ||
+                          extractFieldValue(rawRequest, 'source_website') ||
+                          extractFieldValue(rawRequest, 'sourceWebsite') ||
+                          formData.pretty?.toString().match(/Source Website:\s*([^\n]+)/)?.[1] || '';
+
     const submissionId = formData.submissionID?.toString() || generateId();
 
     // Create the lead entry
@@ -129,19 +101,27 @@ export async function POST(request: Request) {
       id: generateId(),
       type: 'form',
       uploadedAt: new Date().toISOString(),
-      formData: rawRequest,
       name: name.trim(),
       email: email.trim(),
       phone: phone.trim(),
       submissionId,
+      sourceWebsite: sourceWebsite.trim(),
+      formData: rawRequest,
     };
 
-    // Save to leads data
-    const data = await readLeadsData();
-    data.leads.unshift(lead);
-    await writeLeadsData(data);
+    // Store as JSON blob in Vercel Blob storage
+    const pathname = `leads/${lead.id}-form.json`;
+    await put(pathname, JSON.stringify(lead), {
+      access: 'public',
+      contentType: 'application/json',
+    });
 
-    console.log('JotForm lead saved:', { id: lead.id, name: lead.name, email: lead.email });
+    console.log('JotForm lead saved to Vercel Blob:', {
+      id: lead.id,
+      name: lead.name,
+      email: lead.email,
+      sourceWebsite: lead.sourceWebsite,
+    });
 
     return NextResponse.json({ success: true, leadId: lead.id });
   } catch (error) {

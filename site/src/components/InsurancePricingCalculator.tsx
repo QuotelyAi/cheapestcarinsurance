@@ -1204,7 +1204,7 @@ const InsurancePricingCalculator: React.FC = () => {
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-full flex items-center justify-center bg-indigo-500/30"><svg className="w-5 h-5 text-indigo-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg></div>
-            <div><h1 className="text-xl font-medium text-white">Insurance Quote Calculator</h1><p className="text-white/40 text-sm">Powered by Quotely</p></div>
+            <div><h2 className="text-xl font-medium text-white">Insurance Quote Calculator</h2><p className="text-white/40 text-sm">Powered by Quotely</p></div>
           </div>
           <ProgressBar current={progress.completed} total={progress.total} phase="Getting Started" phaseProgress={phaseProgress} />
         </div>
@@ -1229,7 +1229,7 @@ const InsurancePricingCalculator: React.FC = () => {
         <div className="mb-12">
           <div className="flex items-center gap-3 mb-6">
             <div className="w-10 h-10 rounded-full flex items-center justify-center bg-emerald-500/30"><svg className="w-5 h-5 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg></div>
-            <div><h1 className="text-xl font-medium text-white">Insurance Quote Calculator</h1><p className="text-white/40 text-sm">Powered by Quotely</p></div>
+            <div><h2 className="text-xl font-medium text-white">Insurance Quote Calculator</h2><p className="text-white/40 text-sm">Powered by Quotely</p></div>
           </div>
           <ProgressBar current={progress.completed} total={progress.total} phase="Vehicles" phaseProgress={phaseProgress} />
         </div>
@@ -1260,7 +1260,7 @@ const InsurancePricingCalculator: React.FC = () => {
       <div className="absolute inset-0"><div className={`absolute inset-0 bg-gradient-to-br ${colors.bg} transition-all duration-700`} /><div className="absolute top-1/4 -left-1/4 w-1/2 h-1/2 rounded-full blur-[120px] transition-all duration-700" style={{ backgroundColor: `${colors.accent}15` }} /><div className="absolute bottom-1/4 -right-1/4 w-1/2 h-1/2 rounded-full blur-[120px] transition-all duration-700" style={{ backgroundColor: `${colors.accent}10` }} /></div>
       <div className="relative max-w-2xl mx-auto px-4 py-8 md:py-16">
         <div className="mb-8">
-          <div className="flex items-center gap-3 mb-6"><div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${colors.accent}30` }}><svg className="w-5 h-5" style={{ color: colors.accent }} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg></div><div><h1 className="text-xl font-medium text-white">Insurance Quote Calculator</h1><p className="text-white/40 text-sm">Powered by Quotely</p></div></div>
+          <div className="flex items-center gap-3 mb-6"><div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: `${colors.accent}30` }}><svg className="w-5 h-5" style={{ color: colors.accent }} fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg></div><div><h2 className="text-xl font-medium text-white">Insurance Quote Calculator</h2><p className="text-white/40 text-sm">Powered by Quotely</p></div></div>
           <ProgressBar current={progress.completed} total={progress.total} phase={entityLabel} phaseProgress={phaseProgress} />
         </div>
 

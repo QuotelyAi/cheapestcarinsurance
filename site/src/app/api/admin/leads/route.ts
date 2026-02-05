@@ -11,11 +11,11 @@ interface Lead {
   uploadedAt: string;
   size: number;
   type: 'pdf' | 'form';
-  formData?: {
-    name?: string;
-    email?: string;
-    phone?: string;
-  };
+  name?: string;
+  email?: string;
+  phone?: string;
+  sourceWebsite?: string;
+  formData?: Record<string, unknown>;
 }
 
 async function isAuthenticated(): Promise<boolean> {
@@ -52,20 +52,45 @@ export async function GET() {
     // List all blobs in the leads folder
     const { blobs } = await list({ prefix: 'leads/' });
 
-    const leads: Lead[] = blobs.map(blob => {
-      // Parse metadata from pathname
+    const leads: Lead[] = [];
+
+    for (const blob of blobs) {
       const filename = blob.pathname.replace('leads/', '');
       const id = filename.split('-').slice(0, 2).join('-');
 
-      return {
-        id,
-        filename: filename.split('-').slice(2).join('-') || filename,
-        url: blob.url,
-        uploadedAt: blob.uploadedAt.toISOString(),
-        size: blob.size,
-        type: 'pdf' as const,
-      };
-    });
+      if (filename.endsWith('-form.json')) {
+        // Form submission — fetch and parse the JSON blob
+        try {
+          const response = await fetch(blob.url);
+          const data = await response.json();
+          leads.push({
+            id: data.id || id,
+            filename,
+            url: blob.url,
+            uploadedAt: data.uploadedAt || blob.uploadedAt.toISOString(),
+            size: blob.size,
+            type: 'form',
+            name: data.name || '',
+            email: data.email || '',
+            phone: data.phone || '',
+            sourceWebsite: data.sourceWebsite || '',
+            formData: data.formData,
+          });
+        } catch (err) {
+          console.error('Error parsing form lead blob:', filename, err);
+        }
+      } else {
+        // PDF upload
+        leads.push({
+          id,
+          filename: filename.split('-').slice(2).join('-') || filename,
+          url: blob.url,
+          uploadedAt: blob.uploadedAt.toISOString(),
+          size: blob.size,
+          type: 'pdf',
+        });
+      }
+    }
 
     // Sort by upload date, newest first
     leads.sort((a, b) => new Date(b.uploadedAt).getTime() - new Date(a.uploadedAt).getTime());
