@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+require('dotenv').config({ path: require('path').join(__dirname, '../.env.local') });
+
 if (!process.env.JOTFORM_API_KEY) {
   console.error('❌ Error: JOTFORM_API_KEY environment variable is required');
   console.error('Set it in your .env.local file');
