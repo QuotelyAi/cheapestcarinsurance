@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server';
 import { put } from '@vercel/blob';
+import { notifyNewLead } from '@/lib/email';
 
 const WEBHOOK_SECRET = process.env.JOTFORM_WEBHOOK_SECRET;
 
@@ -122,6 +123,15 @@ export async function POST(request: Request) {
       email: lead.email,
       sourceWebsite: lead.sourceWebsite,
     });
+
+    // Send email notification (don't let email failure block the response)
+    notifyNewLead({
+      name: lead.name,
+      email: lead.email,
+      phone: lead.phone,
+      sourceWebsite: lead.sourceWebsite,
+      submissionId: lead.submissionId,
+    }).catch(err => console.error('Email notification failed:', err.message));
 
     return NextResponse.json({ success: true, leadId: lead.id });
   } catch (error) {
