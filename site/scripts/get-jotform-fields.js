@@ -1,6 +1,12 @@
 #!/usr/bin/env node
 
-const apiKey = process.env.JOTFORM_API_KEY || 'REDACTED_EXPOSED_KEY';
+if (!process.env.JOTFORM_API_KEY) {
+  console.error('❌ Error: JOTFORM_API_KEY environment variable is required');
+  console.error('Set it in your .env.local file');
+  process.exit(1);
+}
+
+const apiKey = process.env.JOTFORM_API_KEY;
 const formId = process.env.JOTFORM_FORM_ID || '242546337686164';
 
 async function getFormFields() {
