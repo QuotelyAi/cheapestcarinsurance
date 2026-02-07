@@ -18,6 +18,33 @@ function QuotePageContent() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // JotForm auto-resize: listen for postMessage from iframe to adjust height
+  useEffect(() => {
+    const handleIFrameMessage = (e: MessageEvent) => {
+      if (typeof e.data !== 'string') return;
+      const args = e.data.split(':');
+      const iframe = document.getElementById(
+        args.length > 2
+          ? 'JotFormIFrame-' + args[args.length - 1]
+          : 'JotFormIFrame-242546337686164'
+      ) as HTMLIFrameElement | null;
+      if (!iframe) return;
+      switch (args[0]) {
+        case 'scrollIntoView':
+          iframe.scrollIntoView();
+          break;
+        case 'setHeight':
+          iframe.style.height = args[1] + 'px';
+          break;
+        case 'reloadPage':
+          window.location.reload();
+          break;
+      }
+    };
+    window.addEventListener('message', handleIFrameMessage, false);
+    return () => window.removeEventListener('message', handleIFrameMessage);
+  }, []);
+
   useEffect(() => {
     const loadForm = async () => {
       try {
@@ -114,10 +141,10 @@ function QuotePageContent() {
             style={{
               minWidth: '100%',
               maxWidth: '100%',
-              height: '800px',
+              height: '539px',
               border: 'none',
             }}
-            scrolling="no"
+            scrolling="yes"
             allow="geolocation; microphone; camera; fullscreen"
           />
         </div>
