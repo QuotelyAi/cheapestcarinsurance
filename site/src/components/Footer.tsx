@@ -81,6 +81,11 @@ export default function Footer() {
                   FAQ
                 </Link>
               </li>
+              <li>
+                <Link href="/review" className="text-gray-400 hover:text-white transition-colors">
+                  Leave a Review
+                </Link>
+              </li>
             </ul>
           </div>
 

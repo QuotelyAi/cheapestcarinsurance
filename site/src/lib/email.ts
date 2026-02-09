@@ -18,6 +18,52 @@ interface LeadNotification {
   submissionId: string;
 }
 
+interface ReviewNotification {
+  name: string;
+  rating: number;
+  comment: string;
+  reviewId: string;
+}
+
+export async function notifyNewReview(review: ReviewNotification): Promise<void> {
+  const to = process.env.NOTIFICATION_EMAIL;
+  if (!to || !process.env.SMTP_HOST) {
+    console.log('SMTP not configured, skipping review email notification');
+    return;
+  }
+
+  const stars = '⭐'.repeat(review.rating);
+
+  await transporter.sendMail({
+    from: process.env.SMTP_USER,
+    to,
+    subject: `New ⭐ Review: ${review.name || 'Anonymous'} — ${review.rating}/5`,
+    text: [
+      `New website review submitted`,
+      ``,
+      `Rating:  ${review.rating}/5 ${stars}`,
+      `Name:    ${review.name || '(anonymous)'}`,
+      `Comment: ${review.comment || '(none)'}`,
+      `ID:      ${review.reviewId}`,
+      `Time:    ${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })}`,
+      ``,
+      `View site: https://cheapestcarinsurancetulsa.com`,
+    ].join('\n'),
+    html: `
+      <div style="font-family: system-ui, sans-serif; max-width: 500px;">
+        <h2 style="color: #1e40af; margin-bottom: 16px;">New Website Review</h2>
+        <div style="font-size: 24px; margin-bottom: 12px;">${stars}</div>
+        <table style="border-collapse: collapse; width: 100%;">
+          <tr><td style="padding: 8px; font-weight: 600; color: #374151;">Rating</td><td style="padding: 8px;">${review.rating}/5</td></tr>
+          <tr style="background: #f9fafb;"><td style="padding: 8px; font-weight: 600; color: #374151;">Name</td><td style="padding: 8px;">${review.name || '(anonymous)'}</td></tr>
+          <tr><td style="padding: 8px; font-weight: 600; color: #374151;">Comment</td><td style="padding: 8px;">${review.comment || '(none)'}</td></tr>
+          <tr style="background: #f9fafb;"><td style="padding: 8px; font-weight: 600; color: #374151;">Submitted</td><td style="padding: 8px;">${new Date().toLocaleString('en-US', { timeZone: 'America/Chicago' })}</td></tr>
+        </table>
+      </div>
+    `,
+  });
+}
+
 export async function notifyNewLead(lead: LeadNotification): Promise<void> {
   const to = process.env.NOTIFICATION_EMAIL;
   if (!to || !process.env.SMTP_HOST) {
