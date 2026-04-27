@@ -3758,5 +3758,59 @@
         }
       }
     }
+  },
+  {
+    "id": 1000,
+    "slug": "save-money-on-car-insurance",
+    "title": "save money on car insurance",
+    "alt_text": "save money on car insurance",
+    "source_url": "/images/blog/save-money-on-car-insurance.svg",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "sizes": {
+        "full": {
+          "source_url": "/images/blog/save-money-on-car-insurance.svg",
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    }
+  },
+  {
+    "id": 1001,
+    "slug": "best-car-insurance-to-save-money",
+    "title": "best car insurance to save money",
+    "alt_text": "best car insurance to save money",
+    "source_url": "/images/blog/best-car-insurance-to-save-money.svg",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "sizes": {
+        "full": {
+          "source_url": "/images/blog/best-car-insurance-to-save-money.svg",
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    }
+  },
+  {
+    "id": 1002,
+    "slug": "best-car-insurance-in-metro-tulsa",
+    "title": "best car insurance in metro tulsa",
+    "alt_text": "best car insurance in metro tulsa",
+    "source_url": "/images/blog/best-car-insurance-in-metro-tulsa.svg",
+    "media_details": {
+      "width": 1024,
+      "height": 1024,
+      "sizes": {
+        "full": {
+          "source_url": "/images/blog/best-car-insurance-in-metro-tulsa.svg",
+          "width": 1024,
+          "height": 1024
+        }
+      }
+    }
   }
 ]

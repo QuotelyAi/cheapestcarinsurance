@@ -8,8 +8,8 @@ const slug = 'broken-arrow';
 const driveTime = '15 minutes';
 
 export const metadata: Metadata = {
-  title: `Cheap Car Insurance ${city}, OK | Compare ${carrierCount} Carriers`,
-  description: `Compare car insurance rates in ${city}, Oklahoma from ${carrierCount} carriers. Get free quotes from a licensed independent agency. Serving ${city} and ${county} County.`,
+  title: `Cheapest Car Insurance ${city}, OK | Free Quotes`,
+  description: `Get the cheapest car insurance rates in ${city}, Oklahoma. Compare ${carrierCount} carriers instantly. Licensed independent agent serving ${city} and ${county} County.`,
   keywords: [
     `car insurance ${city}`,
     `auto insurance ${city} OK`,

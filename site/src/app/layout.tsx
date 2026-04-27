@@ -10,10 +10,10 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://cheapestcarinsurancetulsa.com'),
 
   title: {
-    default: `Cheapest Car Insurance Tulsa | Compare ${carrierCount} Carriers | Free Quote`,
+    default: `Cheapest Car Insurance Tulsa, OK | Compare & Save`,
     template: "%s | Cheapest Car Insurance Tulsa",
   },
-  description: `Compare auto insurance from ${carrierCount} carriers in Tulsa, OK. Licensed independent agency. Get your free quote today.`,
+  description: `Compare car insurance rates from 10+ carriers in Tulsa, OK. See your best price in 2 minutes. Licensed local agent, free quotes.`,
   keywords: ["car insurance Tulsa", "auto insurance Tulsa OK", "cheap car insurance Tulsa", "Oklahoma car insurance", "Tulsa insurance quotes"],
   authors: [{ name: agencyConfig.name }],
   creator: agencyConfig.name,
@@ -36,15 +36,23 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://cheapestcarinsurancetulsa.com",
     siteName: agencyConfig.name,
-    title: `Cheapest Car Insurance Tulsa | Compare ${carrierCount} Carriers`,
-    description: `Compare auto insurance from ${carrierCount} carriers in Tulsa, OK. Licensed independent agency.`,
+    title: `Cheapest Car Insurance Tulsa, OK | Compare & Save`,
+    description: `Compare car insurance rates from 10+ carriers in Tulsa, OK. See your best price in 2 minutes. Licensed local agent, free quotes.`,
+    images: [
+      {
+        url: "https://cheapestcarinsurancetulsa.com/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Cheapest Car Insurance Tulsa",
+      },
+    ],
   },
 
   // Twitter cards
   twitter: {
     card: "summary_large_image",
-    title: `Cheapest Car Insurance Tulsa | Compare ${carrierCount} Carriers`,
-    description: `Compare auto insurance from ${carrierCount} carriers in Tulsa, OK.`,
+    title: `Cheapest Car Insurance Tulsa, OK | Compare & Save`,
+    description: `Compare car insurance rates from 10+ carriers in Tulsa, OK. See your best price in 2 minutes.`,
   },
 
   // Comprehensive robots directives for Google
