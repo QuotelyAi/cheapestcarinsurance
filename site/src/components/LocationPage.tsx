@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { agencyConfig, serviceAreas, oklahomaCompliance, carrierCount } from '@/lib/config';
+import { cityDataMap } from '@/lib/cityData';
 
 interface LocationPageProps {
   city: string;
@@ -9,6 +10,7 @@ interface LocationPageProps {
 }
 
 export default function LocationPage({ city, county, slug, driveTime }: LocationPageProps) {
+  const cityData = cityDataMap[slug];
   // JSON-LD for this specific location page
   const localJsonLd = {
     "@context": "https://schema.org",
@@ -97,6 +99,13 @@ export default function LocationPage({ city, county, slug, driveTime }: Location
                 we can help you find car insurance that fits your needs and budget.
               </p>
 
+              {cityData && (
+                <>
+                  <p>{cityData.uniqueContent.paragraph1}</p>
+                  <p>{cityData.uniqueContent.paragraph2}</p>
+                </>
+              )}
+
               <h3>Why {city} Drivers Choose Us</h3>
               <ul>
                 <li><strong>Local Service:</strong> Our Tulsa office is just {driveTime} from {city}</li>
@@ -135,6 +144,20 @@ export default function LocationPage({ city, county, slug, driveTime }: Location
                   Tulsa, OK {agencyConfig.address.zip}.
                 </p>
               </div>
+
+              {cityData && (
+                <>
+                  <h3>Frequently Asked Questions About {city} Car Insurance</h3>
+                  <div className="space-y-6">
+                    {cityData.uniqueContent.faqQuestions.map((faq, index) => (
+                      <div key={index} className="bg-gray-50 p-4 rounded-lg">
+                        <h4 className="font-semibold text-gray-900 mb-2">{faq.question}</h4>
+                        <p className="text-gray-700">{faq.answer}</p>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
 
               <h2>Get Your {city} Car Insurance Quote</h2>
               <p>
