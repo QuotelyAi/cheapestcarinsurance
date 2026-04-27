@@ -18,6 +18,7 @@ export interface WPPost {
   tags: number[];
   author: number;
   status: string;
+  meta_description?: string;
 }
 
 export interface WPPage {

@@ -61,8 +61,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const plainTitle = post.title.replace(/<[^>]*>/g, '');
   const plainExcerpt = post.excerpt.replace(/<[^>]*>/g, '').trim();
 
-  // Use excerpt if available, otherwise extract from content
-  let description = plainExcerpt;
+  // Use manual meta_description if available, otherwise use excerpt, then extract from content
+  let description = post.meta_description || plainExcerpt;
   if (!description || description.length < 50) {
     description = extractMetaDescription(post.content);
   }
