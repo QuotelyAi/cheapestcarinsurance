@@ -1,0 +1,547 @@
+{
+  "total_articles": 90,
+  "start_date": "2025-10-15T08:00:00.000Z",
+  "end_date": "2026-10-19T08:00:00.000Z",
+  "articles": [
+    {
+      "date": "2025-10-15T08:00:00.000Z",
+      "title": "Expert Deep Dive: Blog Post Title",
+      "slug": "review-1-blog-post-title",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-10-20T08:00:00.000Z",
+      "title": "2025 Update: How to Plan a Last-Minute Weekend Getaway - What's Changed",
+      "slug": "review-2-how-to-plan-a-last-minute-weekend-getaway",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-10-27T08:00:00.000Z",
+      "title": "Expert Deep Dive: Travel Like a Pro",
+      "slug": "review-3-travel-like-a-pro",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-10-30T08:00:00.000Z",
+      "title": "2025 Update: The Ultimate Guide to Self-Care: Daily Habits to Boost Your Mood - What's Changed",
+      "slug": "review-4-the-ultimate-guide-to-self-care-daily-habits-to-boost-your-mood",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-10-31T08:00:00.000Z",
+      "title": "Expert Deep Dive: Child Safety on the Road: Best Practices for Driving with Babies",
+      "slug": "review-5-child-safety-driving-with-babies",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-11-01T08:00:00.000Z",
+      "title": "2025 Update: Comparing Auto Insurance Costs: Tulsa vs. Major Cities - What's Changed",
+      "slug": "review-6-comparing-auto-insurance-costs-tulsa-vs-major-cities",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-11-02T08:00:00.000Z",
+      "title": "Expert Deep Dive: Safe Road Travels for Children in Tulsa (2025) | 10 Essential Tips",
+      "slug": "review-7-tulsa-child-safety-insurance-tips",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-11-04T08:00:00.000Z",
+      "title": "2025 Update: 4.2Insights - What's Changed",
+      "slug": "review-8-insights",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-11-06T08:00:00.000Z",
+      "title": "Expert Deep Dive: 3.6 Progressive Auto Insurance",
+      "slug": "review-9-save-money-insurance",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-11-08T08:00:00.000Z",
+      "title": "2025 Update: 00.03 Guide to Cheaper Auto Insurance in Oklahoma - What's Changed",
+      "slug": "review-10-cheaper-auto-insurance-oklahoma",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-11-15T08:00:00.000Z",
+      "title": "Expert Deep Dive: Financial Security in Insurance",
+      "slug": "review-11-financial-security-in-insurance",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-11-19T08:00:00.000Z",
+      "title": "2025 Update: New Driver? Essential Car Insurance Tips for 2024 - What's Changed",
+      "slug": "review-12-new-driver-essential-car-insurance-tips-for-2024",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-11-23T08:00:00.000Z",
+      "title": "Expert Deep Dive: Why Every Oklahoman Needs Quality Car Insurance?",
+      "slug": "review-13-why-every-oklahoman-needs-quality-car-insurance",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-11-24T08:00:00.000Z",
+      "title": "2025 Update: Understanding Car Insurance: A Guide to Safe Auto Coverage Options - What's Changed",
+      "slug": "review-14-understanding-car-insurance",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-11-27T08:00:00.000Z",
+      "title": "Expert Deep Dive: Navigating the Claims Process for Totaled Vehicles",
+      "slug": "review-15-navigating-the-claims-process-for-totaled-vehicles",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-12-02T08:00:00.000Z",
+      "title": "2025 Update: Is Full Coverage Car Insurance Worth It in 2024? Here’s What You Need to Know - What's Changed",
+      "slug": "review-16-full-coverage-car-insurance-2024",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-12-05T08:00:00.000Z",
+      "title": "Expert Deep Dive: Why Every Oklahoman Needs Quality Car Insurance?",
+      "slug": "review-17-why-every-oklahoman-needs-quality-car-insurance-2",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-12-09T08:00:00.000Z",
+      "title": "2025 Update: The Impact of Credit Scores on Auto Insurance Premiums - What's Changed",
+      "slug": "review-18-the-impact-of-credit-scores-on-auto-insurance-premiums",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-12-10T08:00:00.000Z",
+      "title": "Expert Deep Dive: Navigating Car Accidents: Insured vs. Uninsured Car Owners in the US",
+      "slug": "review-19-navigating-car-accidents-insured-vs-uninsured-car-owners-in-the-us",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-12-11T08:00:00.000Z",
+      "title": "2025 Update: Updating Your Car Insurance Policy Following Significant Life Events - What's Changed",
+      "slug": "review-20-updating-your-car-insurance-policy-following-significant-life-events",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-12-13T08:00:00.000Z",
+      "title": "Expert Deep Dive: Is Your Car Properly Insured? A Quick Checklist for Peace of Mind",
+      "slug": "review-21-is-your-car-properly-insured",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-12-14T08:00:00.000Z",
+      "title": "2025 Update: Evaluating Full Coverage Car Insurance: Benefits and Considerations - What's Changed",
+      "slug": "review-22-evaluating-full-coverage-car-insurance-benefits-and-considerations",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-12-21T08:00:00.000Z",
+      "title": "Expert Deep Dive: Comprehensive Guide to Car Insurance in Tulsa, Oklahoma",
+      "slug": "review-23-comprehensive-guide-to-car-insurance-in-tulsa-oklahoma",
+      "type": "expansion"
+    },
+    {
+      "date": "2025-12-27T08:00:00.000Z",
+      "title": "2025 Update: 00.05 Tulsa&#8217;s Best Car Insurance - What's Changed",
+      "slug": "review-24-tulsa-best-car-insurance",
+      "type": "commentary"
+    },
+    {
+      "date": "2025-12-31T08:00:00.000Z",
+      "title": "Expert Deep Dive: How to Calculate Your Car Insurance Premiums: A Comprehensive Guide",
+      "slug": "review-25-how-to-calculate-your-car-insurance-premiums-a-comprehensive-guide",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-01-06T08:00:00.000Z",
+      "title": "2025 Update: Find the Best Car Insurance in Tulsa, Oklahoma: A Comprehensive Guide - What's Changed",
+      "slug": "review-26-find-the-best-car-insurance-in-tulsa-oklahoma-a-comprehensive-guide",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-01-08T08:00:00.000Z",
+      "title": "Expert Deep Dive: Affordable Auto Insurance: Secure Low Rates in Tulsa, Oklahoma",
+      "slug": "review-27-affordable-auto-insurance-secure-low-rates-in-tulsa-oklahoma",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-01-10T08:00:00.000Z",
+      "title": "2025 Update: 00.02 UVED Vehicle Enforcement - What's Changed",
+      "slug": "review-28-ok",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-01-16T08:00:00.000Z",
+      "title": "Expert Deep Dive: Navigating Oklahoma Roads: A Comprehensive Guide to Driving and Car Insurance in OK",
+      "slug": "review-29-navigating-oklahoma-roads-a-comprehensive-guide-to-driving-and-car-insurance-in-ok",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-01-23T08:00:00.000Z",
+      "title": "2025 Update: 00.01 Essential Car Insurance Tips for New Teen Drivers - What's Changed",
+      "slug": "review-30-teen-insure-tips",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-01-27T08:00:00.000Z",
+      "title": "Expert Deep Dive: Understanding Premium vs Standard Car Insurance in Oklahoma",
+      "slug": "review-31-understanding-premium-vs-standard-car-insurance-in-oklahoma",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-01-29T08:00:00.000Z",
+      "title": "2025 Update: Finding the Ideal Age for Maximum Car Insurance Savings in Oklahoma City - What's Changed",
+      "slug": "review-32-finding-the-ideal-age-for-maximum-car-insurance-savings-in-oklahoma-city",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-02-05T08:00:00.000Z",
+      "title": "Expert Deep Dive: How to Drive Down Car Insurance Premiums in Oklahoma, Affordable Car Insurance Tips This 2024",
+      "slug": "review-33-how-to-drive-down-car-insurance-premiums-in-oklahoma-affordable-car-insurance-tips-this-2024",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-02-12T08:00:00.000Z",
+      "title": "2025 Update: Understanding Car Insurance: A Guide to Safe Auto Coverage Options - What's Changed",
+      "slug": "review-34-understanding-car-insurance-a-guide-to-safe-auto-coverage-options",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-02-19T08:00:00.000Z",
+      "title": "Expert Deep Dive: Top 10 Reliable Cars for Every Budget in Tulsa – Find Your Perfect Vehicle",
+      "slug": "review-35-https-cheapestcarinsurancetulsa-com-top-10-reliable-cars-for-every-budget-in-tulsa",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-02-23T08:00:00.000Z",
+      "title": "2025 Update: Why Oklahoma City Drivers Need Comprehensive Car Insurance Coverage - What's Changed",
+      "slug": "review-36-why-oklahoma-city-drivers-need-comprehensive-car-insurance-coverage",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-03-02T08:00:00.000Z",
+      "title": "Expert Deep Dive: Updating Your Car Insurance Policy Following Significant Life Events",
+      "slug": "review-37-updating-your-car-insurance-policy-following-significant-life-events-2",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-03-08T08:00:00.000Z",
+      "title": "2025 Update: Understanding Oklahoma Auto Insurance: Essential Guide - What's Changed",
+      "slug": "review-38-oklahoma-auto-insurance-guide",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-03-14T08:00:00.000Z",
+      "title": "Expert Deep Dive: Affordable Car Insurance for Smart Drivers in Oklahoma",
+      "slug": "review-39-affordable-car-insurance-oklahoma",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-03-19T08:00:00.000Z",
+      "title": "2025 Update: 00.06 Cheapest Renters Insurance - What's Changed",
+      "slug": "review-40-cheapest-renters-insurance",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-03-23T08:00:00.000Z",
+      "title": "Expert Deep Dive: DeepSeek.ai R1 Model: Open-Source AI Power Redefined",
+      "slug": "review-41-deepseek-r1-model",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-03-28T08:00:00.000Z",
+      "title": "2025 Update: Car Accident Checklist: How to Stay Safe and Protected - What's Changed",
+      "slug": "review-42-what-to-do-after-a-car-accident",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-04-01T08:00:00.000Z",
+      "title": "Expert Deep Dive: Save Money on Car Insurance",
+      "slug": "review-43-save-money-on-car-insurance",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-04-03T08:00:00.000Z",
+      "title": "2025 Update: Is Online Car Insurance Safe? What You Should Know Before Buying in Tulsa, Oklahoma - What's Changed",
+      "slug": "review-44-is-online-car-insurance-safe-what-you-should-know-before-buying-in-tulsa-oklahoma",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-04-04T08:00:00.000Z",
+      "title": "Expert Deep Dive: Car Insurance in Oklahoma | Budget-Friendly Solutions That Drive Smart",
+      "slug": "review-45-car-insurance-in-oklahoma",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-04-09T08:00:00.000Z",
+      "title": "2025 Update: 3.7Equity Auto Insurance - What's Changed",
+      "slug": "review-46-3-7equity-auto-insurance",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-04-15T08:00:00.000Z",
+      "title": "Expert Deep Dive: MotorWorld Sydney | Premier Automotive Festival",
+      "slug": "review-47-motorworld-sydney-auto-show",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-04-19T08:00:00.000Z",
+      "title": "2025 Update: Buying Auto Insurance: The Beginner’s Guide - What's Changed",
+      "slug": "review-48-buying-auto-insurance-guide",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-04-26T08:00:00.000Z",
+      "title": "Expert Deep Dive: Top Ways Tulsa Drivers Can Save on Their Car Insurance",
+      "slug": "review-49-top-ways-tulsa-drivers-can-save-on-their-car-insurance",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-04-29T08:00:00.000Z",
+      "title": "2025 Update: Comparing Full Coverage vs. Liability Insurance for Oklahoma Drivers - What's Changed",
+      "slug": "review-50-comparing-full-coverage-vs-liability-insurance-for-oklahoma-drivers",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-05-05T08:00:00.000Z",
+      "title": "Expert Deep Dive: Tips on How to Save on Car Insurance in Tulsa Easily",
+      "slug": "review-51-tips-on-how-to-save-on-car-insurance-in-tulsa-easily",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-05-12T08:00:00.000Z",
+      "title": "2025 Update: Understanding How to File an Auto Insurance Claim - What's Changed",
+      "slug": "review-52-understanding-how-to-file-an-auto-insurance-claim",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-05-17T08:00:00.000Z",
+      "title": "Expert Deep Dive: How Cars and Trucks Alter Insurance Premiums in Tulsa",
+      "slug": "review-53-how-cars-and-trucks-alter-insurance-premiums-in-tulsa",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-05-22T08:00:00.000Z",
+      "title": "2025 Update: Auto Insurance Strategies for Extreme Weather Preparedness - What's Changed",
+      "slug": "review-54-auto-insurance-strategies-for-extreme-weather-preparedness",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-05-28T08:00:00.000Z",
+      "title": "Expert Deep Dive: 10 Common Mistakes Tulsa Drivers Make When Buying Auto Insurance",
+      "slug": "review-55-10-common-mistakes-tulsa-drivers-make-when-buying-auto-insurance",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-06-03T08:00:00.000Z",
+      "title": "2025 Update: Save Big by Bundling Home and Auto Insurance in Tulsa - What's Changed",
+      "slug": "review-56-save-big-by-bundling-home-and-auto-insurance-in-tulsa",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-06-05T08:00:00.000Z",
+      "title": "Expert Deep Dive: Tulsa Teen Drivers: Tips for Affordable Car Insurance",
+      "slug": "review-57-tulsa-teen-drivers-tips-for-affordable-car-insurance",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-06-09T08:00:00.000Z",
+      "title": "2025 Update: Why Tulsa Drivers Should Consider Uninsured Motorist Coverage - What's Changed",
+      "slug": "review-58-why-tulsa-drivers-should-consider-uninsured-motorist-coverage",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-06-14T08:00:00.000Z",
+      "title": "Expert Deep Dive: Why Comprehensive Coverage Is a Must for Tulsa’s Storm Season",
+      "slug": "review-59-why-comprehensive-coverage-is-a-must-for-tulsas-storm-season",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-06-20T08:00:00.000Z",
+      "title": "2025 Update: Understanding the Basics of Car Insurance - What's Changed",
+      "slug": "review-60-understanding-the-basics-of-car-insurance",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-06-26T08:00:00.000Z",
+      "title": "Expert Deep Dive: Types of Car Insurance Coverage Explained",
+      "slug": "review-61-types-of-car-insurance-coverage-explained",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-07-02T08:00:00.000Z",
+      "title": "2025 Update: Factors That Affect Your Car Insurance Premium - What's Changed",
+      "slug": "review-62-factors-that-affect-your-car-insurance-premium",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-07-08T08:00:00.000Z",
+      "title": "Expert Deep Dive: TryQuotely.com",
+      "slug": "review-63-quotely-founder-dustin-wyzard-tulsa",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-07-15T08:00:00.000Z",
+      "title": "2025 Update: AI Automation Benefits for Efficiency in Insurance: How AI Enhances Operations, Accuracy, and Customer Experience - What's Changed",
+      "slug": "review-64-ai-automation-benefits-for-efficiency-in-insurance-how-ai-enhances-operations-accuracy-and-customer-experience",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-07-16T08:00:00.000Z",
+      "title": "Expert Deep Dive: Your Ultimate Guide to Insurance Agency Management Systems: Features, Benefits, and Solutions for Agents",
+      "slug": "review-65-your-ultimate-guide-to-insurance-agency-management-systems-features-benefits-and-solutions-for-agents",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-07-17T08:00:00.000Z",
+      "title": "2025 Update: Insurance Agent Platform: How to Boost Agency Productivity and Operational Intelligence - What's Changed",
+      "slug": "review-66-insurance-agent-platform-how-to-boost-agency-productivity-and-operational-intelligence",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-07-21T08:00:00.000Z",
+      "title": "Expert Deep Dive: Modernize Insurance Agencies with Quotely&#8217;s Insurtech Operating System",
+      "slug": "review-67-modernize-insurance-agencies-with-quotelys-insurtech-operating-system",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-07-28T08:00:00.000Z",
+      "title": "2025 Update: The Quotely AI Revolution: $1.37/Hour vs $15+/Hour Staff - What's Changed",
+      "slug": "review-68-the-quotely-ai-revolution-1-37-hour-vs-15-hour-staff",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-08-04T08:00:00.000Z",
+      "title": "Expert Deep Dive: Why AI is Making Legacy Insurance Raters Obsolete",
+      "slug": "review-69-why-ai-is-making-legacy-insurance-raters-obsolete",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-08-07T08:00:00.000Z",
+      "title": "2025 Update: Modernize Insurance Agencies with Quotely&#8217;s Insurtech Operating System - What's Changed",
+      "slug": "review-70-modernize-insurance-agencies-with-quotelys-insurtech-operating-system-2",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-08-11T08:00:00.000Z",
+      "title": "Expert Deep Dive: Gail Insurtech Platform: How AI Empowers Independent Insurance Agents to Boost Sales and Efficiency",
+      "slug": "review-71-gail-insurtech-platform-how-ai-empowers-independent-insurance-agents-to-boost-sales-and-efficiency",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-08-12T08:00:00.000Z",
+      "title": "2025 Update: How AI Automation Transforms Cost Efficiency in Insurance: Key Benefits and Implementation Strategies - What's Changed",
+      "slug": "review-72-how-ai-automation-transforms-cost-efficiency-in-insurance-key-benefits-and-implementation-strategies",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-08-17T08:00:00.000Z",
+      "title": "Expert Deep Dive: EZLynx AMS CRM Rater",
+      "slug": "review-73-ezlynx-ams-crm-rater",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-08-18T08:00:00.000Z",
+      "title": "2025 Update: AI in Insurance: How It&#8217;s Revolutionizing Agencies and Operations - What's Changed",
+      "slug": "review-74-ai-in-insurance-how-its-revolutionizing-agencies-and-operations",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-08-25T08:00:00.000Z",
+      "title": "Expert Deep Dive: Why AI-Driven Insurance Software Outperforms Traditional Methods",
+      "slug": "review-75-why-ai-driven-insurance-software-outperforms-traditional-methods",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-08-29T08:00:00.000Z",
+      "title": "2025 Update: AI Automation Advantages Transforming Insurance Operations - What's Changed",
+      "slug": "review-76-ai-automation-advantages-transforming-insurance-operations",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-09-03T08:00:00.000Z",
+      "title": "Expert Deep Dive: How AI Solutions Transform Efficiency in Insurance Software for Independent Agents and Agencies",
+      "slug": "review-77-how-ai-solutions-transform-efficiency-in-insurance-software-for-independent-agents-and-agencies",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-09-06T08:00:00.000Z",
+      "title": "2025 Update: AI Automation Benefits in Insurance Software: How AI Enhances Efficiency, Accuracy, and Customer Experience - What's Changed",
+      "slug": "review-78-ai-automation-benefits-in-insurance-software-how-ai-enhances-efficiency-accuracy-and-customer-experience",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-09-13T08:00:00.000Z",
+      "title": "Expert Deep Dive: AI Solutions Transforming Insurance Industry Challenges: How Artificial Intelligence Enhances Claims, Underwriting, Risk Management, and Customer Experience",
+      "slug": "review-79-ai-solutions-transforming-insurance-industry-challenges-how-artificial-intelligence-enhances-claims-underwriting-risk-management-and-customer-experience",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-09-14T08:00:00.000Z",
+      "title": "2025 Update: What Are the Key Benefits of AI Automation in Insurance? - What's Changed",
+      "slug": "review-80-what-are-the-key-benefits-of-ai-automation-in-insurance",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-09-16T08:00:00.000Z",
+      "title": "Expert Deep Dive: Comprehensive Guide to Comparative Rating Software for Independent Insurance Agents",
+      "slug": "review-81-comprehensive-guide-to-comparative-rating-software-for-independent-insurance-agents",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-09-20T08:00:00.000Z",
+      "title": "2025 Update: Maximize Cost Savings With AI Automation in Insurance: How to Reduce Costs and Boost Efficiency - What's Changed",
+      "slug": "review-82-maximize-cost-savings-with-ai-automation-in-insurance-how-to-reduce-costs-and-boost-efficiency",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-09-26T08:00:00.000Z",
+      "title": "Expert Deep Dive: Auto and Home Insurance Rater Software: Compare Quotes, Save Time, and Boost Agency Efficiency",
+      "slug": "review-83-auto-and-home-insurance-rater-software-compare-quotes-save-time-and-boost-agency-efficiency",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-10-02T08:00:00.000Z",
+      "title": "2025 Update: EZLynx AMS CRM Rater: A Practical Breakdown for Independent Insurance Agencies - What's Changed",
+      "slug": "review-84-ezlynx-ams-crm-rater-a-practical-breakdown-for-independent-insurance-agencies",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-10-04T08:00:00.000Z",
+      "title": "Expert Deep Dive: Save Money on Car Insurance",
+      "slug": "review-85-save-money-on-car-insurance",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-10-07T08:00:00.000Z",
+      "title": "2025 Update: Best Car Insurance to Save Money - What's Changed",
+      "slug": "review-86-best-car-insurance-to-save-money",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-10-14T08:00:00.000Z",
+      "title": "Expert Deep Dive: Best Car Insurance in Metro Tulsa",
+      "slug": "review-87-best-car-insurance-in-metro-tulsa",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-10-15T08:00:00.000Z",
+      "title": "2025 Update: SR-22 Insurance in Oklahoma: Cost, Requirements & Where to Get It - What's Changed",
+      "slug": "review-88-sr22-insurance-in-oklahoma-cost-requirements-where-to-get-it",
+      "type": "commentary"
+    },
+    {
+      "date": "2026-10-17T08:00:00.000Z",
+      "title": "Expert Deep Dive: Cheapest Full Coverage Car Insurance in Oklahoma 2026",
+      "slug": "review-89-cheapest-full-coverage-car-insurance-in-oklahoma-2026",
+      "type": "expansion"
+    },
+    {
+      "date": "2026-10-19T08:00:00.000Z",
+      "title": "2025 Update: Low-Income Car Insurance in Oklahoma: UVED Program & Alternatives - What's Changed",
+      "slug": "review-90-low-income-car-insurance-in-oklahoma-uved-program-alternatives",
+      "type": "commentary"
+    }
+  ]
+}

@@ -57,6 +57,10 @@ function sanitizeWPContent(html: string): string {
   // This catches orphaned images that would 404
   sanitized = sanitized.replace(/<img[^>]*src=["'](?!https?:\/\/|\/|data:)[^"']+\.png["'][^>]*>/gi, '');
 
+  // Convert H1 tags to H2 (page already has a primary H1, prevent duplicate)
+  sanitized = sanitized.replace(/<h1([^>]*)>/gi, '<h2$1>');
+  sanitized = sanitized.replace(/<\/h1>/gi, '</h2>');
+
   return sanitized.trim();
 }
 
