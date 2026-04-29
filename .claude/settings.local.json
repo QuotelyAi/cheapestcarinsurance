@@ -145,7 +145,9 @@
       "Bash(cd \"C:/Users/dusti/AppData/Local/Temp/quotely-video1\" && npx remotion render src/index.ts QuoteSpeed \"C:/Users/dusti/quotely-v3/video/out/Video_1_Quote_Speed.mp4\" 2>&1 | head -40)",
       "Bash(cd \"C:/Users/dusti/AppData/Local/Temp/quotely-video1\" && npx remotion render src/index.ts QuoteSpeed \"C:/Users/dusti/quotely-v3/video/out/Video_1_Quote_Speed.mp4\" --concurrency=16 2>&1)",
       "Bash(python3 *)",
-      "Bash(npm run *)"
+      "Bash(npm run *)",
+      "mcp__plugin_vercel_vercel__get_deployment_build_logs",
+      "WebFetch(domain:vercel.com)"
     ]
   },
   "model": "haiku"
